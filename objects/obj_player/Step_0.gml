@@ -1,14 +1,4 @@
-if (in_ladder) {
-	x_velocity = 0; 
-} else {
-	x_velocity = max_velocity;
-}
-
-if (place_meeting(x, y, obj_ladder)) {
-    in_ladder = true;
-} else {
-    in_ladder = false;
-}
+in_ladder = place_meeting(x, y, obj_ladder);
 
 var _ts_castle_walls = layer_tilemap_get_id("ts_castle_walls");
 
